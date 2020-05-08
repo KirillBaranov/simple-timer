@@ -1,0 +1,33 @@
+$primary-color:          #0E80E9;
+$secondary-color:        #7C459A;
+
+// bg
+$main-bg-color:          #E5E5E5;
+
+$font-color:             #2C2C2C;
+$link-navigation-color:  #4B2460;
+
+$btn-border-radius:      35px;
+$btn-padding:            12px 23px;
+
+$z-index-menu:           1060;
+$z-index-overlay:        1030;
+$z-index-modal:          1080;
+$z-index-overlay__modal: 1070;
+$z-index-submenu:        1060;
+
+
+$xl:                     1200px;
+$lg:                     992px;
+$md:                     768px;
+$sm:                     576px;
+$xs:                     360px;
+
+$xl-container:           1140px;
+$lg-container:           976px;
+$md-container:           748px;
+$sm-container:           550px;
+$xs-container:           360px;
+
+
+$fade-animation-duration: all .3s ease-in-out;

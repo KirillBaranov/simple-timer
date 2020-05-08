@@ -1,0 +1,73 @@
+@import "bootstrap/bootstrap";
+
+main {
+  padding: 15vh 0;
+}
+
+#timer {
+  margin-top: 100px;
+}
+
+.timer-block {
+  width: 70px;
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background: #000;
+  border-radius: 8px;
+  margin: 0 5px;
+  padding: 10px 0;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 0 10px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    transform: translateY( 1px );
+  }
+}
+
+.btn-start {
+  background: darkolivegreen;
+  color: #ffffff;
+  width: 120px;
+  height: 50px;
+}
+
+.btn-stop {
+  background: indianred;
+  color: #ffffff;
+  width: 120px;
+  height: 50px;
+}
+
+.num {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.timer__days-container {
+
+}
+
+// Import ur custom scss files here.
