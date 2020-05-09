@@ -1,4 +1,7 @@
 /**
+ * Author: Inverse Studio
+ * Author site: inverse-studio.ru
+ *
  * Target - DOM node.
  * deadline - deadline date as example 2020-04-24T22:28:00
  * Options - object have fields:
@@ -134,19 +137,19 @@ export class Timer {
     setCorrectLabelText() {
         const days         = this.timeToDeadline.days;
         const daysLabel    = (days === 1 || (days > 19 && days % 10 === 1)) ? 'день' :
-                             ((days > 1 && days < 5) || (days > 19 && days % 10 > 1 && days % 10 < 5)) ? 'дня' : 'дней';
+            ((days > 1 && days < 5) || (days > 19 && days % 10 > 1 && days % 10 < 5)) ? 'дня' : 'дней';
 
         const hours        = this.timeToDeadline.hours;
         const hoursLabel   = (hours === 1 || (hours > 19 && hours % 10 === 1)) ? 'час' :
-                             ((hours > 1 && hours < 5) || (hours > 19 && hours % 10 > 1 && hours % 10 < 5)) ? 'часа' : 'часов';
+            ((hours > 1 && hours < 5) || (hours > 19 && hours % 10 > 1 && hours % 10 < 5)) ? 'часа' : 'часов';
 
         const minutes      = this.timeToDeadline.minutes;
         const minutesLabel = ( minutes === 1 || minutes % 10 === 1 ) ? 'минута' :
-                             ( minutes % 10 === 0 || ( minutes % 10 >= 5 && minutes % 10 <= 9 ) )  ? 'минут' : 'минуты';
+            ( minutes % 10 === 0 || ( minutes % 10 >= 5 && minutes % 10 <= 9 ) || ( minutes > 10 && minutes <= 19 ) )  ? 'минут' : 'минуты';
 
         const seconds      = this.timeToDeadline.seconds;
         const secondsLabel = ( seconds === 1 || seconds % 10 === 1 ) ? 'секунда' :
-                             ( seconds % 10 === 0 || ( seconds % 10 >= 5 && seconds % 10 <= 9 ) ) ? 'секунд' : 'секунды';
+            ( seconds % 10 === 0 || ( seconds % 10 >= 5 && seconds % 10 <= 9 ) || seconds > 10 && seconds <= 19 ) ? 'секунд' : 'секунды';
 
         this.labels = {
             daysLabel,
@@ -219,7 +222,7 @@ export class Timer {
         }
 
         catch (e) {
-            throw new Error( `Invalid callback method for ${ this.e }` );
+            throw new console.error( `Invalid callback method for ${ this.e }` );
         }
     }
 
